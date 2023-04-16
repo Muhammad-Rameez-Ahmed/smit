@@ -83,10 +83,10 @@
 
 
 // program4
-function listItem(text) {
-    let html = document.getElementById("list").innerHTML = `<li>${text}</li>`
-}
-listItem("wash")
+// function listItem(text) {
+//     let html = document.getElementById("list").innerHTML = `<li>${text}</li>`
+// }
+// listItem("wash")
 
 
 
@@ -98,4 +98,31 @@ listItem("wash")
 //     element.style.color = "#fff"
 // }
 // changeColor(element, "#000")
+const movies = [
+    { title: "Movie 1", genre: "Action", rating: 8, year: 2000 },
+    { title: "Movie 2", genre: "Comedy", rating: 7, year: 1999 },
+    { title: "Movie 3", genre: "Drama", rating: 9, year: 2005 },
+    // Add more movies as needed
+];
 
+const recommendationsList = document.getElementById("recommendations");
+const inputForm = document.querySelector("form");
+
+inputForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const genreInput = document.getElementById("genre").value;
+    const ratingInput = document.getElementById("rating").value;
+    const yearInput = document.getElementById("year").value;
+
+    // Recommendation logic goes here
+
+    // Example recommendation:
+    const recommendation = movies[0].title;
+
+    // Add recommendation to the DOM
+    const recommendationItem = document.createElement("li");
+    const recommendationText = document.createTextNode(recommendation);
+    recommendationItem.appendChild(recommendationText);
+    recommendationsList.appendChild(recommendationItem);
+});

@@ -2,14 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="javaSrcipt.js" defer></script>
-    <title>Document</title>
+    <title>Movie Recommendations</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <footer><p id="test">hello i am rameez ahmed</p></footer>
+    <header>
+      <h1>Movie Recommendations</h1>
+    </header>
+    <main>
+      <section class="input-section">
+        <h2>Enter Your Preferences</h2>
+        <form>
+          <label for="genre">Genre:</label>
+          <select id="genre">
+            <option value="Action">Action</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Drama">Drama</option>
+            <!-- Add more options as needed -->
+          </select>
 
-    <ul id="list"></ul>
+          <label for="rating">Rating:</label>
+          <input type="number" id="rating" min="1" max="10" />
+
+          <label for="year">Release Year:</label>
+          <input type="number" id="year" min="1900" max="2099" />
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+
+      <section class="recommendations-section">
+        <h2>Movie Recommendations</h2>
+        <ul id="recommendations">
+          <!-- Movie recommendations will be dynamically added here -->
+        </ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
